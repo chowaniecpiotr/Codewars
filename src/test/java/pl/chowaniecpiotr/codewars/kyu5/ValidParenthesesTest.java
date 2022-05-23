@@ -9,11 +9,10 @@ import static org.testng.Assert.*;
 public class ValidParenthesesTest {
 
     public void sampleTest() {
-        // assertEquals("expected", "actual");
-        assertEquals(true,ValidParentheses.validParentheses( "()" ));
-        assertEquals(false,ValidParentheses.validParentheses( "())" ));
-        assertEquals(true,ValidParentheses.validParentheses( "32423(sgsdg)" ));
-        assertEquals(false,ValidParentheses.validParentheses( "(dsgdsg))2432" ));
-        assertEquals(true,ValidParentheses.validParentheses( "adasdasfa" ));
+        assertTrue(ValidParentheses.validParentheses("()"), "True should be returned.");
+        assertFalse(ValidParentheses.validParentheses("())"), "False should be returned.");
+        assertTrue(ValidParentheses.validParentheses("32423(sgsdg)"), "True should be returned.");
+        assertFalse(ValidParentheses.validParentheses("(dsgdsg))2432"), "False should be returned.");
+        assertTrue(ValidParentheses.validParentheses("adasdasfa"), "True should be returned.");
     }
 }
